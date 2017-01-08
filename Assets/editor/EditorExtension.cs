@@ -6,11 +6,12 @@ using System.Linq;
 [CustomPropertyDrawer(typeof(Rename))]
 class RenameDrawer : PropertyDrawer
 {
+    bool showChildren = true;
     Rename Rename { get { return attribute as Rename; } }
 
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
-        return 16;
+        return showChildren ? EditorGUI.GetPropertyHeight(property, label) : 16;
     }
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
@@ -29,7 +30,7 @@ class RenameDrawer : PropertyDrawer
         }
         else
         {
-            EditorGUI.PropertyField(position, property, label);
+            showChildren = EditorGUI.PropertyField(position, property, label, showChildren);
         }
     }
 

@@ -11,7 +11,7 @@ public class DNA : MonoBehaviour
     [SerializeField, Rename("DNA强度", 1, 100)]
     public int Intensity = 50;
 
-    [SerializeField, Header("每 10%DNA 提供的属性"), Rename("生命值加成", 0, 20)]
+    [SerializeField, Header("DNA 提供的属性"), Rename("生命值加成", 0, 20)]
     public int Life = 10;
 
     [SerializeField, Rename("法力值加成", 0, 20)]
