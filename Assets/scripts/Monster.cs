@@ -39,7 +39,6 @@ public class Monster : MonoBehaviour
         float DNASpeed = 0.0f;
         foreach (Gene gene in Genome.Genes)
         {
-
             DNA dna = gene.DNA;
             int percent = gene.PercentI;
             DNALife += dna.Life * percent;
@@ -51,13 +50,13 @@ public class Monster : MonoBehaviour
             DNASpeed += dna.Speed * percent;
         }
 
-        CurrentLife = MaxLife = Creature.Life * DNALife;
-        CurrentMana = MaxMana = Creature.Mana * DNAMana;
-        PhysicalAttack = Creature.PhysicalAttack * DNAPhysicalAttack;
-        MagicalAttack = Creature.MagicalAttack * DNAMagicalAttack;
-        PhysicalDefense = Creature.PhysicalDefense * DNAPhysicalDefense;
-        MagicalDefense = Creature.MagicalDefense * DNAMagicalDefense;
-        Speed = Creature.Speed * DNASpeed;
+        CurrentLife = MaxLife = Creature.Life * DNALife * 0.01f;
+        CurrentMana = MaxMana = Creature.Mana * DNAMana * 0.01f;
+        PhysicalAttack = Creature.PhysicalAttack * DNAPhysicalAttack * 0.01f;
+        MagicalAttack = Creature.MagicalAttack * DNAMagicalAttack * 0.01f;
+        PhysicalDefense = Creature.PhysicalDefense * DNAPhysicalDefense * 0.01f;
+        MagicalDefense = Creature.MagicalDefense * DNAMagicalDefense * 0.01f;
+        Speed = Creature.Speed * DNASpeed * 0.01f;
         CriticalRate = Creature.CriticalRate * 0.01f;
         CriticalDamage = Creature.CriticalDamage * 0.01f;
     }

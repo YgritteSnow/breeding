@@ -129,7 +129,7 @@ public class TestUI : MonoBehaviour
             Rect listUIRect = uiRect;
             listUIRect.x += listUIRect.width;
             listUIRect.width = 320;
-            listUIRect.height = 50;
+            listUIRect.height = 30 * DNANames.Count / 3;
 
             GUI.changed = false;
             ID = GUI.SelectionGrid(listUIRect, ID, DNANames.ToArray(), 4);
