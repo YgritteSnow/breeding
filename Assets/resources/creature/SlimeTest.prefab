@@ -52,12 +52,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: SlimeTest
+  Sprite: {fileID: 21300000, guid: b5b40c82bc65a6446b007b9982006983, type: 3}
   Life: 1
   Mana: 1
   PhysicalAttack: 1
   MagicalAttack: 1
   PhysicalDefense: 1
   MagicalDefense: 1
-  Speed: 1
+  Speed: 9
   CriticalRate: 2
   CriticalDamage: 150

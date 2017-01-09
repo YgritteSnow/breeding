@@ -9,6 +9,9 @@ public class Creature : MonoBehaviour
     [SerializeField]
     public string Name = "";
 
+    [SerializeField]
+    public Sprite Sprite = null;
+
     [Header("怪物属性百分比")]
     [SerializeField, Rename("生命值", 1, 200)]
     public int Life = 1;
