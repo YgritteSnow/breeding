@@ -52,11 +52,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Slime
-  Intensity: 50
-  Life: 10
-  Mana: 10
-  PhysicalAttack: 5
-  MagicalAttack: 5
-  PhysicalDefense: 5
-  MagicalDefense: 5
-  Speed: 5
+  Intensity: 60
+  Life: 32
+  Mana: 38
+  PhysicalAttack: 10
+  MagicalAttack: 12
+  PhysicalDefense: 13
+  MagicalDefense: 11
+  Speed: 10

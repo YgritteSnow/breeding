@@ -52,11 +52,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Beast
-  Intensity: 50
-  Life: 10
-  Mana: 10
-  PhysicalAttack: 5
-  MagicalAttack: 5
-  PhysicalDefense: 5
-  MagicalDefense: 5
-  Speed: 5
+  Intensity: 70
+  Life: 38
+  Mana: 18
+  PhysicalAttack: 15
+  MagicalAttack: 8
+  PhysicalDefense: 14
+  MagicalDefense: 9
+  Speed: 14

@@ -52,11 +52,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Flying
-  Intensity: 50
-  Life: 10
-  Mana: 10
-  PhysicalAttack: 5
-  MagicalAttack: 5
-  PhysicalDefense: 5
+  Intensity: 60
+  Life: 25
+  Mana: 32
+  PhysicalAttack: 11
+  MagicalAttack: 13
+  PhysicalDefense: 7
   MagicalDefense: 5
-  Speed: 5
+  Speed: 20

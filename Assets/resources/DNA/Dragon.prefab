@@ -52,11 +52,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Dragon
-  Intensity: 50
-  Life: 10
-  Mana: 10
-  PhysicalAttack: 5
-  MagicalAttack: 5
-  PhysicalDefense: 5
-  MagicalDefense: 5
-  Speed: 5
+  Intensity: 10
+  Life: 35
+  Mana: 42
+  PhysicalAttack: 13
+  MagicalAttack: 14
+  PhysicalDefense: 13
+  MagicalDefense: 14
+  Speed: 13

@@ -52,11 +52,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Plant
-  Intensity: 50
-  Life: 10
-  Mana: 10
-  PhysicalAttack: 5
-  MagicalAttack: 5
-  PhysicalDefense: 5
-  MagicalDefense: 5
-  Speed: 5
+  Intensity: 90
+  Life: 48
+  Mana: 42
+  PhysicalAttack: 11
+  MagicalAttack: 15
+  PhysicalDefense: 17
+  MagicalDefense: 1
+  Speed: 1

@@ -53,10 +53,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Demon
   Intensity: 50
-  Life: 10
-  Mana: 10
-  PhysicalAttack: 5
-  MagicalAttack: 5
-  PhysicalDefense: 5
-  MagicalDefense: 5
-  Speed: 5
+  Life: 28
+  Mana: 43
+  PhysicalAttack: 11
+  MagicalAttack: 15
+  PhysicalDefense: 11
+  MagicalDefense: 15
+  Speed: 11

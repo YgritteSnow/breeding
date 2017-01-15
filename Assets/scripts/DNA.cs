@@ -11,10 +11,10 @@ public class DNA : MonoBehaviour
     [SerializeField, Rename("DNA强度", 1, 100)]
     public int Intensity = 50;
 
-    [SerializeField, Header("DNA 提供的属性"), Rename("生命值加成", 0, 20)]
+    [SerializeField, Header("DNA 提供的属性"), Rename("生命值加成", 1, 50)]
     public int Life = 10;
 
-    [SerializeField, Rename("法力值加成", 0, 20)]
+    [SerializeField, Rename("法力值加成", 1, 50)]
     public int Mana = 10;
 
     [SerializeField, Rename("物理攻击力加成", 0, 20)]
@@ -31,4 +31,23 @@ public class DNA : MonoBehaviour
 
     [SerializeField, Rename("速度加成", 0, 20)]
     public int Speed = 5;
+
+    public float RMGene { get { return Intensity * 0.01f; } }
+
+    public float RMSpeed { get { return Speed * 0.05f; } }
+
+    public float RMPhysic { get { return (RMPhysicOffense + RMPhysicDefense + RMLife) / 3.0f; } }
+
+    public float RMMagic { get { return (RMMagicOffense + RMMagicDefense + RMMana) / 3.0f; } }
+
+    public float RMOffense { get { return (RMPhysicOffense + RMMagicOffense + RMMana) / 3.0f; } }
+
+    public float RMDefense { get { return (RMPhysicDefense + RMMagicDefense + RMLife) / 3.0f; } }
+
+    float RMLife { get { return Life * 0.02f; } }
+    float RMMana { get { return Mana * 0.02f; } }
+    float RMPhysicOffense { get { return PhysicalAttack * 0.05f; } }
+    float RMPhysicDefense { get { return PhysicalDefense * 0.05f; } }
+    float RMMagicOffense { get { return MagicalAttack * 0.05f; } }
+    float RMMagicDefense { get { return MagicalDefense * 0.05f; } }
 }

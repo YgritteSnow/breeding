@@ -52,11 +52,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Insect
-  Intensity: 50
-  Life: 10
-  Mana: 10
+  Intensity: 95
+  Life: 17
+  Mana: 28
   PhysicalAttack: 5
-  MagicalAttack: 5
+  MagicalAttack: 7
   PhysicalDefense: 5
-  MagicalDefense: 5
-  Speed: 5
+  MagicalDefense: 8
+  Speed: 15

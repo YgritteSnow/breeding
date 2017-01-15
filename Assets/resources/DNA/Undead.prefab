@@ -53,10 +53,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Undead
   Intensity: 50
-  Life: 10
-  Mana: 10
-  PhysicalAttack: 5
-  MagicalAttack: 5
-  PhysicalDefense: 5
-  MagicalDefense: 5
-  Speed: 5
+  Life: 13
+  Mana: 3
+  PhysicalAttack: 20
+  MagicalAttack: 1
+  PhysicalDefense: 3
+  MagicalDefense: 17
+  Speed: 3
