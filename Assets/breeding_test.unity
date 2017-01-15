@@ -205,6 +205,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808096497970d5c45b6b9101078261de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RadarPrefab: {fileID: 1364930212654760, guid: 912c64fe47c2cd0439c7f7837a56e070,
+    type: 2}
 --- !u!4 &1947904837
 Transform:
   m_ObjectHideFlags: 0

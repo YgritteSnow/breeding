@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class TestUI : MonoBehaviour
 {
+    public GameObject RadarPrefab;
+
     Codex Codex = null;
     Monster monster = null;
     List<string> DNANames = new List<string>();
 
     void Start()
     {
-        Random.InitState(0xca5123);
+        Random.InitState(0xCA51B7);
         Codex = Resources.Load<GameObject>("codex").GetComponent<Codex>();
 
         Codex.DNAPool.ForEach(dna => DNANames.Add(dna.name));
@@ -22,6 +24,14 @@ public class TestUI : MonoBehaviour
     int fatherID = -1;
     int motherID = -1;
     int otherID = -1;
+
+    Vector3 RadarMapPosF = new Vector3(-2, 1, 0);
+    Vector3 RadarMapPosM = new Vector3(3, 1, 0);
+    Vector3 RadarMapPosO = new Vector3(0, 4, 0);
+    RadarMap fatherMap = null;
+    RadarMap motherMap = null;
+    RadarMap otherMap = null;
+
 
     void OnGUI()
     {
@@ -49,6 +59,9 @@ public class TestUI : MonoBehaviour
 
     void SpawnMonster()
     {
+        GameObject.Destroy(fatherMap.gameObject);
+        GameObject.Destroy(motherMap.gameObject);
+
         Genome fatherGenome = new Genome(Codex.DNAPool[fatherID]);
         Genome motherGenome = new Genome(Codex.DNAPool[motherID]);
 
@@ -103,9 +116,29 @@ public class TestUI : MonoBehaviour
 
         uiRect.y += 20;
         fatherID = DrawList(uiRect, "选择父系DNA", fatherID, ref showFatherList);
+        if (fatherID != -1)
+        {
+            if (fatherMap == null)
+            {
+                GameObject frmGO = GameObject.Instantiate<GameObject>(RadarPrefab);
+                frmGO.transform.position = RadarMapPosF;
+                fatherMap = frmGO.GetComponent<RadarMap>();
+            }
+            SetRadarMap(fatherMap, Codex.DNAPool[fatherID]);
+        }
 
         uiRect.y += 20;
         motherID = DrawList(uiRect, "选择母系DNA", motherID, ref showMotherList);
+        if (motherID != -1)
+        {
+            if (motherMap == null)
+            {
+                GameObject mrmGO = GameObject.Instantiate<GameObject>(RadarPrefab);
+                mrmGO.transform.position = RadarMapPosM;
+                motherMap = mrmGO.GetComponent<RadarMap>();
+            }
+            SetRadarMap(motherMap, Codex.DNAPool[motherID]);
+        }
 
         if (fatherID != -1 && motherID != -1)
         {
@@ -150,6 +183,13 @@ public class TestUI : MonoBehaviour
         otherID = DrawList(uiRect, "选择配偶DNA", otherID, ref showOtherList);
         if (otherID != -1)
         {
+            if (otherMap == null)
+            {
+                GameObject ormGO = GameObject.Instantiate<GameObject>(RadarPrefab);
+                ormGO.transform.position = RadarMapPosO;
+                otherMap = ormGO.GetComponent<RadarMap>();
+            }
+            SetRadarMap(otherMap, Codex.DNAPool[otherID]);
             uiRect.y += 20;
             if (GUI.Button(uiRect, "繁殖!"))
             {
@@ -177,6 +217,10 @@ public class TestUI : MonoBehaviour
             uiRect.y += 20;
             GUI.Label(uiRect, p.Key + ":" + p.Value);
         }
+    }
 
+    void SetRadarMap(RadarMap map, DNA dna)
+    {
+        map.ResetMap(dna);
     }
 }
