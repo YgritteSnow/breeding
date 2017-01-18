@@ -26,7 +26,7 @@ public class TestUI : MonoBehaviour
     int otherID = -1;
 
     Vector3 RadarMapPosF = new Vector3(-2, 1, 0);
-    Vector3 RadarMapPosM = new Vector3(3, 1, 0);
+    Vector3 RadarMapPosM = new Vector3(4, 1, 0);
     Vector3 RadarMapPosO = new Vector3(0, 4, 0);
     RadarMap fatherMap = null;
     RadarMap motherMap = null;

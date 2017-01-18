@@ -36,18 +36,15 @@ public class DNA : MonoBehaviour
 
     public float RMSpeed { get { return Speed * 0.05f; } }
 
-    public float RMPhysic { get { return (RMPhysicOffense + RMPhysicDefense + RMLife) / 3.0f; } }
+    public float RMLife { get { return Life * 0.02f; } }
 
-    public float RMMagic { get { return (RMMagicOffense + RMMagicDefense + RMMana) / 3.0f; } }
+    public float RMMana { get { return Mana * 0.02f; } }
 
-    public float RMOffense { get { return (RMPhysicOffense + RMMagicOffense + RMMana) / 3.0f; } }
+    public float RMPhysicOffense { get { return PhysicalAttack * 0.05f; } }
 
-    public float RMDefense { get { return (RMPhysicDefense + RMMagicDefense + RMLife) / 3.0f; } }
+    public float RMPhysicDefense { get { return PhysicalDefense * 0.05f; } }
 
-    float RMLife { get { return Life * 0.02f; } }
-    float RMMana { get { return Mana * 0.02f; } }
-    float RMPhysicOffense { get { return PhysicalAttack * 0.05f; } }
-    float RMPhysicDefense { get { return PhysicalDefense * 0.05f; } }
-    float RMMagicOffense { get { return MagicalAttack * 0.05f; } }
-    float RMMagicDefense { get { return MagicalDefense * 0.05f; } }
+    public float RMMagicOffense { get { return MagicalAttack * 0.05f; } }
+
+    public float RMMagicDefense { get { return MagicalDefense * 0.05f; } }
 }

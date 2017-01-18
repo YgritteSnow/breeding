@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4821187143495746}
   - component: {fileID: 120583426967955108}
   m_Layer: 0
-  m_Name: lines
+  m_Name: Lines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4541328700221014}
   - component: {fileID: 114532801854424480}
   m_Layer: 0
-  m_Name: radar_map
+  m_Name: RadarMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 23503134831564564}
   - component: {fileID: 33633786726694070}
   m_Layer: 0
-  m_Name: radar_map
+  m_Name: Solids
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 33548075918582440}
   - component: {fileID: 23133142037591486}
   m_Layer: 0
-  m_Name: background
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -226,11 +226,13 @@ MonoBehaviour:
   radius: 1
   titles:
   - "\u7E41\u6B96\u80FD\u529B"
-  - "\u901F\u5EA6"
-  - "\u7269\u7406\u4EB2\u548C"
-  - "\u6CD5\u672F\u4EB2\u548C"
-  - "\u653B\u51FB\u80FD\u529B"
-  - "\u9632\u5FA1\u80FD\u529B"
+  - "\u884C\u52A8\u80FD\u529B"
+  - "\u7269\u7406\u653B\u51FB"
+  - "\u6CD5\u672F\u653B\u51FB"
+  - "\u7269\u7406\u9632\u5FA1"
+  - "\u6CD5\u672F\u9632\u5FA1"
+  - "\u751F\u547D"
+  - "\u6CD5\u529B"
 --- !u!120 &120583426967955108
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -262,28 +264,10 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0.24999999, y: 0.43301272, z: 0}
-  - {x: 0.5, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: -0.25000003, y: 0.4330127, z: 0}
-  - {x: 0.24999999, y: 0.43301272, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: -0.5, y: -0.00000004371139, z: 0}
-  - {x: -0.25000003, y: 0.4330127, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: -0.24999996, y: -0.43301272, z: 0}
-  - {x: -0.5, y: -0.00000004371139, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0.24999996, y: -0.43301272, z: 0}
-  - {x: -0.24999996, y: -0.43301272, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0.5, y: 0, z: 0}
-  - {x: 0.24999996, y: -0.43301272, z: 0}
+  m_Positions: []
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 0.015
+    widthMultiplier: 0.02
     widthCurve:
       serializedVersion: 2
       m_Curve:

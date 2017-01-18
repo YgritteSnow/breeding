@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class RadarMap : MonoBehaviour
 {
+    const int RadarCount = 8;
     List<Vector3> bgMesh = new List<Vector3>();
     List<Vector3> radarMesh = new List<Vector3>();
     List<int> faces = new List<int>();
@@ -34,19 +35,19 @@ public class RadarMap : MonoBehaviour
 
         radarMesh.Add(Vector3.zero);
         bgMesh.Add(Vector3.zero);
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < RadarCount; i++)
         {
-            float radian = 2.0f * Mathf.PI * i / 6.0f;
+            float radian = 2.0f * Mathf.PI * i / RadarCount;
             float cosr = Mathf.Cos(radian);
             float sinr = Mathf.Sin(radian);
             bgMesh.Add(new Vector3(cosr, sinr, 0) * radius);
             radarMesh.Add(new Vector3(cosr, sinr, 0) * radius * 0.5f);
         }
 
-        for (int i = 1; i <= 6; i++)
+        for (int i = 1; i <= RadarCount; i++)
         {
             faces.Add(0);
-            faces.Add((i + 1) % 7 + (i / 6));
+            faces.Add((i + 1) % (RadarCount + 1) + (i / RadarCount));
             faces.Add(i);
         }
 
@@ -71,24 +72,26 @@ public class RadarMap : MonoBehaviour
 
     public void ResetMap(DNA dna)
     {
-        for (int i = 1; i <= 6; i++)
+        for (int i = 1; i <= RadarCount; i++)
         {
             radarMesh[i] = bgMesh[i];
         }
         radarMesh[1] *= dna.RMGene;
         radarMesh[2] *= dna.RMSpeed;
-        radarMesh[3] *= dna.RMPhysic;
-        radarMesh[4] *= dna.RMMagic;
-        radarMesh[5] *= dna.RMOffense;
-        radarMesh[6] *= dna.RMDefense;
+        radarMesh[3] *= dna.RMPhysicOffense;
+        radarMesh[4] *= dna.RMMagicOffense;
+        radarMesh[5] *= dna.RMPhysicDefense;
+        radarMesh[6] *= dna.RMMagicDefense;
+        radarMesh[7] *= dna.RMLife;
+        radarMesh[8] *= dna.RMMana;
         radar.vertices = radarMesh.ToArray();
     }
 
     void OnGUI()
     {
-        for (int i = 1; i <= 6; i++)
+        for (int i = 1; i <= RadarCount; i++)
         {
-            Vector3 t = bgMesh[i] * 1.5f;
+            Vector3 t = bgMesh[i] * 2.0f;
             Vector3 p = transform.position;
             t.y = -t.y;
             p.y = -p.y;
