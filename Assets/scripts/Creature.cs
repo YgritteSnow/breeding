@@ -14,25 +14,25 @@ public class Creature : MonoBehaviour
 
     [Header("怪物属性百分比")]
     [SerializeField, Rename("生命值", 1, 200)]
-    public int Life = 1;
+    public int Life = 30;
 
     [SerializeField, Rename("法力值", 1, 200)]
-    public int Mana = 1;
+    public int Mana = 30;
 
     [SerializeField, Rename("物理攻击力", 1, 200)]
-    public int PhysicalAttack = 1;
+    public int PhysicalAttack = 30;
 
     [SerializeField, Rename("法术攻击力", 1, 200)]
-    public int MagicalAttack = 1;
+    public int MagicalAttack = 30;
 
     [SerializeField, Rename("物理防御力", 1, 200)]
-    public int PhysicalDefense = 1;
+    public int PhysicalDefense = 30;
 
     [SerializeField, Rename("法术防御力", 1, 200)]
-    public int MagicalDefense = 1;
+    public int MagicalDefense = 30;
 
     [SerializeField, Rename("速度", 1, 200)]
-    public int Speed = 1;
+    public int Speed = 30;
 
     [SerializeField, Rename("暴击几率", 0, 100)]
     public int CriticalRate = 2;
