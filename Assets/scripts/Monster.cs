@@ -50,15 +50,17 @@ public class Monster : MonoBehaviour
             DNASpeed += dna.Speed * percent;
         }
 
-        CurrentLife = MaxLife = Creature.Life * DNALife * 0.01f;
-        CurrentMana = MaxMana = Creature.Mana * DNAMana * 0.01f;
-        PhysicalAttack = Creature.PhysicalAttack * DNAPhysicalAttack * 0.01f;
-        MagicalAttack = Creature.MagicalAttack * DNAMagicalAttack * 0.01f;
-        PhysicalDefense = Creature.PhysicalDefense * DNAPhysicalDefense * 0.01f;
-        MagicalDefense = Creature.MagicalDefense * DNAMagicalDefense * 0.01f;
-        Speed = Creature.Speed * DNASpeed * 0.01f;
-        CriticalRate = Creature.CriticalRate * 0.01f;
-        CriticalDamage = Creature.CriticalDamage * 0.01f;
+        const float kScale = 0.001f;// 1/1000
+
+        CurrentLife = MaxLife = Creature.Life * DNALife * kScale;
+        CurrentMana = MaxMana = Creature.Mana * DNAMana * kScale;
+        PhysicalAttack = Creature.PhysicalAttack * DNAPhysicalAttack * kScale;
+        MagicalAttack = Creature.MagicalAttack * DNAMagicalAttack * kScale;
+        PhysicalDefense = Creature.PhysicalDefense * DNAPhysicalDefense * kScale;
+        MagicalDefense = Creature.MagicalDefense * DNAMagicalDefense * kScale;
+        Speed = Creature.Speed * DNASpeed * kScale;
+        CriticalRate = Creature.CriticalRate * kScale;
+        CriticalDamage = Creature.CriticalDamage * kScale;
     }
 
     public float MaxLife

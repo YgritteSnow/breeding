@@ -52,13 +52,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: FireTest
-  Sprite: {fileID: 21300000, guid: 2f45acd9864cb2547915d749cc93249b, type: 3}
-  Life: 1
-  Mana: 1
-  PhysicalAttack: 1
-  MagicalAttack: 1
-  PhysicalDefense: 1
-  MagicalDefense: 1
-  Speed: 5
+  Sprite: {fileID: 21300000, guid: 0c9c00dd17c04d342bab1708a9f88113, type: 3}
+  Life: 30
+  Mana: 30
+  PhysicalAttack: 30
+  MagicalAttack: 30
+  PhysicalDefense: 30
+  MagicalDefense: 3
+  Speed: 30
   CriticalRate: 2
   CriticalDamage: 150

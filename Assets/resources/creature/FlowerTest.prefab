@@ -52,13 +52,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: FlowerTest
-  Sprite: {fileID: 21300000, guid: 9b410852d7bf8a045b4d1a42272c2815, type: 3}
-  Life: 1
-  Mana: 1
-  PhysicalAttack: 1
-  MagicalAttack: 1
-  PhysicalDefense: 1
-  MagicalDefense: 1
-  Speed: 6
+  Sprite: {fileID: 21300000, guid: 0c9c00dd17c04d342bab1708a9f88113, type: 3}
+  Life: 30
+  Mana: 30
+  PhysicalAttack: 30
+  MagicalAttack: 30
+  PhysicalDefense: 30
+  MagicalDefense: 3
+  Speed: 30
   CriticalRate: 2
   CriticalDamage: 150
