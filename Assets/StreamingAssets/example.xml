@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Conversation ID="0" ValidCondition="player.is_dead == false">
+	<Entrances>
+		<Branch If="conversation.count &gt; 1" QuestionName="another_default" />
+		<Branch QuestionName="default" />
+	</Entrances>
+	<Questions>
+		<Question Name="default" Text="你好，陌生人……">
+			<Answer ID="1" Text="你是谁？">
+				<Branch QuestionName="who_are_u" />
+			</Answer>
+			<Answer ID="2" Text="这儿是哪里？">
+				<Branch QuestionName="where_am_i" />
+			</Answer>
+		</Question>
+		<Question Name="another_default" Text="你还有什么想要了解的么？">
+			<Answer ID="1" Text="你是谁？" ShowCondition="conversation.last_id != 1 &amp;&amp; conversation.count &lt; 7">
+				<Action Do="npc.love+=1" />
+				<Branch QuestionName="who_are_u" />
+			</Answer>
+			<Answer ID="2" Text="这儿是哪里？" ShowCondition="conversation.last_id != 2 || conversation.count &gt;= 7">
+				<Action Do="player.is_dead != player.is_dead" />
+				<Action Do="player.hp := 100" />
+				<Action Do="global.sunshine-=2.2" If="global.sunshine &gt; -10.0" />
+				<Branch QuestionName="where_am_i" />
+			</Answer>
+		</Question>
+		<Question Name="who_are_u" Text="你猜！嘿嘿嘿...">
+			<Answer ID="1" Text="好吧……" />
+		</Question>
+		<Question Name="where_am_i" Text="oh，问得好，这得你自己去发现">
+			<Answer ID="2" Text="好吧……" />
+		</Question>
+	</Questions>
+</Conversation>

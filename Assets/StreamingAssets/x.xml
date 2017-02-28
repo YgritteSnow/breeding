@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Conversation ID="1" ValidCondition="player.is_dead == false">
+	<Entrances>
+		<Branch QuestionName="default" />
+	</Entrances>
+	<Questions>
+		<Question Name="default" Text="到东边去！到东边去！\n\n你可以在x_Data\StreamingAssets\目录下找到xml文件，来修正对话！">
+		</Question>
+	</Questions>
+</Conversation>
